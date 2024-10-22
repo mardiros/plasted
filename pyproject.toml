@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "plasted"
-version = "0.1.0"
+version = "0.2.0"
 description = "A WSGI app maded from a PLASTER_URI environment variable."
 authors = ["Guillaume Gauvrit <guillaume@gauvr.it>"]
 homepage = "https://github.com/mardiros/plasted"
