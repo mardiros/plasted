@@ -1,6 +1,7 @@
 import pytest
-from pasted import load_app
-from starlette.testclient import TestClient
+from webtest import TestApp
+
+from plasted import load_app
 
 
 def test_load_app_none():
@@ -12,7 +13,7 @@ def test_load_app_none():
 def test_load_app_yaml(root):
     app = load_app(str(root / "test.yaml"))
     assert app is not None
-    with TestClient(app) as client:
-        response = client.get("/")
-        assert response.status_code == 200
-        assert response.text == "Hello, World!"
+    client = TestApp(app)
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.text == "Hello, World!"

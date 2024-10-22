@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "plasted"
 version = "0.1.0"
-description = ""
+description = "A WSGI app maded from a PLASTER_URI environment variable."
 authors = ["Guillaume Gauvrit <guillaume@gauvr.it>"]
+homepage = "https://github.com/mardiros/plasted"
+repository = "https://github.com/mardiros/plasted"
 readme = "README.md"
+include = ["CHANGELOG.md"]
 packages = [{ include = "plasted", from = "src" }]
 
 [tool.poetry.dependencies]
@@ -15,10 +18,9 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
-plaster-yaml = "^1.1.1"
-starlette = "^0.41.0"
-httpx = "^0.27.2"
+plaster-yaml = "^2.0.0"
 mypy = "^1.12.0"
+webtest = "^3.0.1"
 
 [tool.poetry.group.functest]
 optional = true
