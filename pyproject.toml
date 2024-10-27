@@ -25,6 +25,10 @@ dev = [
 ]
 functest = ["uwsgi>=2.0.27,<3"]
 
+[tool.pdm.build]
+includes = ["src", "CHANGELOG.md"]
+excludes = ["tests"]
+
 [tool.ruff]
 line-length = 88
 target-version = "py39"
