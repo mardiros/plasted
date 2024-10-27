@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import datetime
 
-import celery_yaml
+import plasted
 
 header = (
-    f"## {celery_yaml.__version__} - "
+    f"## {plasted.__version__} - "
     f"Released on {datetime.datetime.now().date().isoformat()}"
 )
 with open("CHANGELOG.md.new", "w") as changelog:
