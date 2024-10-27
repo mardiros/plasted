@@ -2,8 +2,8 @@
 Load an application using the environement variable `PLASTER_URI`.
 """
 
-import os
 import importlib.metadata
+import os
 from typing import Any
 
 import plaster
