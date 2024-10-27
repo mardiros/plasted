@@ -3,11 +3,13 @@ Load an application using the environement variable `PLASTER_URI`.
 """
 
 import os
+import importlib.metadata
 from typing import Any
 
 import plaster
 
 WSGIApp = Any
+__version__ = importlib.metadata.version("plaster-yaml")
 
 
 def load_app(plaster_uri: str | None) -> WSGIApp:
