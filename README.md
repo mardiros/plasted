@@ -1,5 +1,9 @@
 # Plasted
 
+[![Continuous Integration](https://github.com/mardiros/plasted/actions/workflows/tests.yml/badge.svg)](https://github.com/mardiros/plasted/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/mardiros/plasted/graph/badge.svg?token=gi0lEALVAo)](https://codecov.io/gh/mardiros/plasted)
+
+
 Fix the problem to run an WSGI app configured with plaster using uwsgi.
 
 uwsgi as many loader, but it does not support plaster, only the old paste.ini
