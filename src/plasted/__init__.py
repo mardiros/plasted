@@ -4,7 +4,7 @@ Load an application using the environement variable `PLASTER_URI`.
 
 import importlib.metadata
 import os
-from typing import Any
+from typing import Any, Union
 
 import plaster
 
@@ -12,7 +12,7 @@ WSGIApp = Any
 __version__ = importlib.metadata.version("plaster-yaml")
 
 
-def load_app(plaster_uri: str | None) -> WSGIApp:
+def load_app(plaster_uri: Union[str, None]) -> WSGIApp:
     if plaster_uri is None:
         raise LookupError("missing environment variable PLASTER_URI")
 
