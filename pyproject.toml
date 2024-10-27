@@ -1,32 +1,29 @@
-[tool.poetry]
+[project]
 name = "plasted"
 version = "0.2.0"
 description = "A WSGI app maded from a PLASTER_URI environment variable."
-authors = ["Guillaume Gauvrit <guillaume@gauvr.it>"]
-homepage = "https://github.com/mardiros/plasted"
-repository = "https://github.com/mardiros/plasted"
+authors = [{ name = "Guillaume Gauvrit", email = "guillaume@gauvr.it" }]
+requires-python = ">=3.9"
 readme = "README.md"
-include = ["CHANGELOG.md"]
-packages = [{ include = "plasted", from = "src" }]
+dependencies = ["plaster>=1.1.2,<2"]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-plaster = "^1.1.2"
+[project.urls]
+Homepage = "https://github.com/mardiros/plasted"
+Documentation = "https://github.com/mardiros/plasted/blob/main/README.md"
+Repository = "https://github.com/mardiros/plasted.git"
+Issues = "https://github.com/mardiros/plasted/issues"
+Changelog = "https://github.com/mardiros/plasted/blob/main/CHANGELOG.md"
 
-[tool.poetry.group.dev]
-optional = true
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
-plaster-yaml = "^2.0.0"
-mypy = "^1.12.0"
-webtest = "^3.0.1"
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3,<9",
+    "plaster-yaml>=2.0.0,<3",
+    "mypy>=1.12.0,<2",
+    "webtest>=3.0.1,<4",
+]
 
-[tool.poetry.group.functest]
-optional = true
-
-[tool.poetry.group.functest.dependencies]
-uwsgi = "^2.0.27"
+functest = ["uwsgi>=2.0.27,<3"]
 
 [tool.ruff]
 line-length = 88
@@ -51,5 +48,5 @@ module = ["plaster"]
 ignore_missing_imports = true
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
