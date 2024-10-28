@@ -38,6 +38,11 @@ fmt:
     uv run ruff check --fix .
     uv run ruff format src tests
 
+release major_minor_patch: test && changelog
+    # uvx pdm self add pdm-bump
+    uvx pdm bump {{major_minor_patch}}
+    uv sync
+
 changelog:
     uv run python scripts/write_changelog.py
     cat CHANGELOG.md >> CHANGELOG.md.new
