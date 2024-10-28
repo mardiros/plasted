@@ -6,7 +6,7 @@
 
 Fix the problem to run an WSGI app configured with plaster using uwsgi.
 
-uwsgi as many loader, but it does not support plaster, only the old paste.ini
+uwsgi has many loaders, but it does not support plaster, only the old paste.ini
 format.
 
 Plasted
