@@ -1,6 +1,6 @@
 [project]
 name = "plasted"
-version = "0.2.0"
+version = "0.2.1"
 description = "A WSGI app maded from a PLASTER_URI environment variable."
 authors = [{ name = "Guillaume Gauvrit", email = "guillaume@gauvr.it" }]
 requires-python = ">=3.9"

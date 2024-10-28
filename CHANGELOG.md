@@ -1,3 +1,7 @@
+## 0.2.1 - Released on 2024-10-28
+
+* Fix python 3.9 compatibility 
+
 ## 0.2.0  -  2024-10-22
 
 * Setup the logging before returning the application 

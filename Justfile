@@ -44,7 +44,7 @@ release major_minor_patch: test && changelog
     uv sync
 
 changelog:
-    uv run python scripts/write_changelog.py
+    PYTHONPATH=tests/dummy_packages/app1 PLASTER_URI=file+yaml://test.yaml uv run python scripts/write_changelog.py
     cat CHANGELOG.md >> CHANGELOG.md.new
     rm CHANGELOG.md
     mv CHANGELOG.md.new CHANGELOG.md

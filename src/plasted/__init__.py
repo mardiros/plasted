@@ -9,7 +9,7 @@ from typing import Any, Union
 import plaster
 
 WSGIApp = Any
-__version__ = importlib.metadata.version("plaster-yaml")
+__version__ = importlib.metadata.version("plasted")
 
 
 def load_app(plaster_uri: Union[str, None]) -> WSGIApp:
