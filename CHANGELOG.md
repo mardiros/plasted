@@ -1,3 +1,8 @@
+## 0.2.2 - Released on 2024-10-29
+
+* Fix CI workflow
+
+
 ## 0.2.1 - Released on 2024-10-28
 
 * Fix python 3.9 compatibility
