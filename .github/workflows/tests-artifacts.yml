@@ -28,7 +28,12 @@ jobs:
       - name: "Install"
         run: |
           pip install dist/plasted-*.whl --force-reinstall
+          pip install pyramid-helloworld
+          cat << 'EOF' > test.yaml
+          app:
+            use: "egg:pyramid-helloworld"
+          EOF
 
       - name: "Test sdist"
         run: |
-          python -c "from plasted import __version__; print(__version__, end='')"
+          PLASTER_URI=test.yaml python -c "from plasted import __version__; print(__version__, end='')"
