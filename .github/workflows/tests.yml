@@ -60,4 +60,5 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           # Comma-separated list of files to upload
+          token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml
