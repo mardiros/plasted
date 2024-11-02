@@ -28,10 +28,10 @@ jobs:
       - name: "Install"
         run: |
           pip install dist/plasted-*.whl --force-reinstall
-          pip install pyramid-helloworld
+          pip install jeepito
           cat << 'EOF' > test.yaml
           app:
-            use: "egg:pyramid-helloworld"
+            use: "egg:jeepito"
           EOF
 
       - name: "Test sdist"
