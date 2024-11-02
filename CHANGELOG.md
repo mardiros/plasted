@@ -1,3 +1,8 @@
+## 1.0.0 - Released on 2024-11-02
+
+* Initial stable release
+* Update the CI workflow
+
 ## 0.2.2 - Released on 2024-10-29
 
 * Fix CI workflow
