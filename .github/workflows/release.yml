@@ -14,9 +14,9 @@ on:
         default: "dry-run"
         type: string
 
-env:
-  PYTHON_VERSION: "3.12"
-
+permissions:
+  contents: read
+  id-token: write
 
 jobs:
   plan:
