@@ -28,7 +28,7 @@ jobs:
       - name: "Install"
         run: |
           pip install dist/plasted-*.whl --force-reinstall
-          pip install jeepito
+          pip install plaster-yaml
           cat << 'EOF' > test.yaml
           app:
             use: "egg:jeepito"
